@@ -1,0 +1,38 @@
+@use "../helpers" as *;
+
+.header {
+    &__body {
+        padding-block: rem(26);
+        background-color: var(--color-green95);
+        
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 1rem;
+        }
+    }
+
+    &__overlay {
+        @include mobile-above {
+            display: contents;
+        }
+    }
+
+    &__menu{
+        &-list {
+            display:flex;
+            align-items: center;
+            column-gap: rem(20);
+        }
+        &-link{
+            padding: rem(14) rem(24);
+            font-weight: 400;
+            color: var(--color-green20);
+
+            &.is-active {
+                color: var(--color-green40);
+            }
+        }
+    }
+}
