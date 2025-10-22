@@ -1,3 +1,4 @@
+// _variables.scss
 @use "helpers" as *;
 
 :root {
@@ -18,12 +19,28 @@
 
     --font-family-base: "SF-Pro-Rounded", sans-serif;
 
+    
     --container-width: #{rem(1200)};
-    --contaier-padding-x: #{rem(16)};
+    --container-padding-x: #{rem(20)};
+    
+    
+    --container-padding-x: #{rem(20)};
 
+    --border: #{rem(3)} solid var(--color-green20);
     --transition-duration: 0.2s;
 
+    
     @include laptop {
-        --container-width: #{rem(850)};
+        --container-width: #{rem(1100)};
+        --container-padding-x: #{rem(16)};
+    }
+    
+    @include tablet {
+        --container-width: #{rem(900)};
+        --container-padding-x: #{rem(16)};
+    }
+    
+    @include mobile {
+        --container-padding-x: #{rem(12)};
     }
 }

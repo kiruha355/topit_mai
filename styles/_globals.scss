@@ -1,9 +1,9 @@
 @use "helpers" as *;
 
 body {
-    @include fluid-text(16,12);
+    @include fluid-text(18,16);
 
-    font-family: ver(--font-family-base);
+    font-family: var(--font-family-base);
     letter-spacing: normal;
     color: var(--color-green20);
     background-color: var(--color-green95);
@@ -15,7 +15,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    color: var(--color-lihgt);
+    color: var(--color-light);
     font-weight: 500;
 }
 
@@ -80,7 +80,7 @@ a {
     color: inherit;
 
     @include hover {
-        colour: var(--color-green80);
+        color: var(--color-green80);
     }
 
     &[class] {
@@ -89,7 +89,7 @@ a {
 }
 
 :focus-visible {
-    outline: rem(2) dashed var(--color-lihgt);
+    outline: rem(2) dashed var(--color-light);
     outline-offset: rem(4);
     transition-duration: 0s !important;
 }

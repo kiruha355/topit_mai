@@ -2,37 +2,140 @@
 
 .header {
     &__body {
-        padding-block: rem(26);
+        padding-block: rem(12);
         background-color: var(--color-green95);
+        border-bottom: 1px solid var(--color-green90);
         
         &-inner {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            column-gap: 1rem;
         }
     }
 
     &__overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        flex-grow: 1;
+        gap: rem(130);
+        
         @include mobile-above {
-            display: contents;
+            display: flex;
+        }
+        
+        @include mobile {
+            display: none;
         }
     }
 
-    &__menu{
-        &-list {
-            display:flex;
-            align-items: center;
-            column-gap: rem(20);
-        }
-        &-link{
-            padding: rem(14) rem(24);
-            font-weight: 400;
-            color: var(--color-green20);
-
-            &.is-active {
-                color: var(--color-green40);
+    &__logo {
+        flex-shrink: 0;
+        margin-right: auto; 
+        
+        .logo__image {
+            width: rem(200);
+            height: auto;
+            
+            @include laptop {
+                width: rem(160);
             }
+            
+            @include mobile {
+                width: rem(120);
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: rem(0);
+            margin: 0;
+            padding: 0;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+        
+        &-item {
+            position: relative;
+        }
+        
+        &-link {
+            padding: rem(4) rem(15);
+            font-size: rem(15);
+            font-weight: 600;
+            color: var(--color-green30);
+            text-decoration: none;
+            position: relative;
+            white-space: nowrap;
+            
+            &:hover,
+            &.is-active {
+                color: var(--color-green50);
+            }
+            
+            &:hover::after,
+            &.is-active::after {
+                display: block;
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: rem(1);
+                left: rem(12);
+                width: calc(100% - #{rem(24)});
+                height: rem(2);
+                background-color: var(--color-green50);
+                display: none;
+            }
+        }
+    }
+
+    &__login-link {
+        padding: rem(8) rem(20);
+        font-size: rem(15);
+        font-weight: 600;
+        color: var(--color-green20);
+        background-color: var(--color-green90);
+        border: 2px solid transparent;
+        border-radius: rem(20);
+        text-decoration: none;
+        white-space: nowrap;
+        flex-shrink: 0;
+
+        &:hover {
+            color: var(--color-green50);
+            background-color: var(--color-green85);
+            border-color: var(--color-green50);
+        }
+    }
+
+    &__burger-button {
+        display: none;
+        
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            gap: rem(3);
+            padding: rem(6);
+            background: transparent;
+            border: 2px solid var(--color-green80);
+            border-radius: rem(6);
+            cursor: pointer;
+            width: rem(38);
+            height: rem(38);
+            margin-left: auto; 
+        }
+        
+        &-line {
+            width: rem(18);
+            height: rem(2);
+            background-color: var(--color-green30);
         }
     }
 }
