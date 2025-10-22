@@ -2,13 +2,14 @@
 
 .header {
     &__body {
-        padding-block: rem(12);
+        padding-block: rem(8);
         background-color: var(--color-green95);
         border-bottom: 1px solid var(--color-green90);
         
         &-inner {
             display: flex;
             align-items: center;
+            justify-content: space-between; // СТРОГО ПОСЕРЕДИНЕ ОТНОСИТЕЛЬНО КНОПКИ И ЛОГО
         }
     }
 
@@ -17,7 +18,7 @@
         align-items: center;
         justify-content: center; 
         flex-grow: 1;
-        gap: rem(130);
+        gap: rem(100);
         
         @include mobile-above {
             display: flex;
@@ -30,10 +31,9 @@
 
     &__logo {
         flex-shrink: 0;
-        margin-right: auto; 
         
         .logo__image {
-            width: rem(200);
+            width: rem(190);
             height: auto;
             
             @include laptop {
@@ -65,8 +65,8 @@
         }
         
         &-link {
-            padding: rem(4) rem(15);
-            font-size: rem(15);
+            padding: rem(3) rem(15); // БОЛЬШЕ PADDING
+            font-size: rem(17); // БОЛЬШЕ ТЕКСТ
             font-weight: 600;
             color: var(--color-green30);
             text-decoration: none;
@@ -87,8 +87,8 @@
                 content: '';
                 position: absolute;
                 bottom: rem(1);
-                left: rem(12);
-                width: calc(100% - #{rem(24)});
+                left: rem(18);
+                width: calc(100% - #{rem(36)});
                 height: rem(2);
                 background-color: var(--color-green50);
                 display: none;
@@ -97,13 +97,13 @@
     }
 
     &__login-link {
-        padding: rem(8) rem(20);
-        font-size: rem(15);
+        padding: rem(10) rem(24); // БОЛЬШЕ КНОПКА
+        font-size: rem(17); // БОЛЬШЕ ТЕКСТ
         font-weight: 600;
         color: var(--color-green20);
         background-color: var(--color-green90);
         border: 2px solid transparent;
-        border-radius: rem(20);
+        border-radius: rem(30);
         text-decoration: none;
         white-space: nowrap;
         flex-shrink: 0;
@@ -129,7 +129,6 @@
             cursor: pointer;
             width: rem(38);
             height: rem(38);
-            margin-left: auto; 
         }
         
         &-line {
