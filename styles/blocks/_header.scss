@@ -33,15 +33,15 @@
         margin-right: auto; 
         
         .logo__image {
-            width: rem(200);
+            width: rem(150);
             height: auto;
             
             @include laptop {
-                width: rem(160);
+                width: rem(120);
             }
             
             @include mobile {
-                width: rem(120);
+                width: rem(80);
             }
         }
     }

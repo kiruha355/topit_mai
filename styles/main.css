@@ -483,17 +483,17 @@ a[class] {
   margin-right: auto;
 }
 .header__logo .logo__image {
-  width: 12.5rem;
+  width: 9.375rem;
   height: auto;
 }
 @media (width <= 90.06125rem) {
   .header__logo .logo__image {
-    width: 10rem;
+    width: 7.5rem;
   }
 }
 @media (width <= 90.06125rem) {
   .header__logo .logo__image {
-    width: 7.5rem;
+    width: 5rem;
   }
 }
 .header__menu {
