@@ -8,13 +8,13 @@
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header" data-js-header>
         <div class="header__body">
             <div class="header__body-inner container">
                 <a href="/" class="header__logo logo" aria-label="Home" title="Home">
                     <img src="images/logo.png" alt="Logo" class="logo__image" width="280" height="auto">
                 </a>
-                <div class="header__overlay">                
+                <div class="header__overlay" data-js-header-overlay>                
                     <nav class="header__menu">
                         <ul class="header__menu-list">
                             <li class="header__menu-item"> 
@@ -36,7 +36,7 @@
                     </nav>
                     <a href="/" class="header__login-link">Личный кабинет</a>
                 </div>
-                <button class="header__burger-button burger-button visible-mobile" type="button" aria-label="Open menu">
+                <button class="header__burger-button burger-button is active visible-mobile" type="button" aria-label="Open menu" title="Open menu" data-js-header-burger-button>
                     <span class="burger-button__line"></span>
                     <span class="burger-button__line"></span>
                     <span class="burger-button__line"></span>
@@ -44,5 +44,48 @@
             </div>
         </div>
     </header>
+
+    <main>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellat architecto, eaque fugit vitae tenetur aut quasi quibusdam excepturi, ad et, ea dolores officiis ratione ex ullam ducimus vero. Sunt?
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__body">
+                <nav class="footer__menu">
+                    <div class="footer__menu-column">
+                        <a class="footer__menu-main-link" href="/">Свяжитесь с нами</a>
+                        <div class="apps-icons">
+                            <a href="https://t.me/your_telegram" class="app-icon-link" target="_blank" rel="noopener noreferrer">
+                                <img src="images/telegram-icon-free-png.webp" alt="Telegram" class="app-icon">
+                            </a>
+                            <a href="https://wa.me/your_whatsapp" class="app-icon-link" target="_blank" rel="noopener noreferrer">
+                                <img src="images/whatsapp_PNG20.png" alt="WhatsApp" class="app-icon">
+                            </a>
+                            <a href="https://vk.com/your_vk" class="app-icon-link" target="_blank" rel="noopener noreferrer">
+                                <img src="images/vk-logo-png-5.png" alt="VK" class="app-icon">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__extra">
+                <p class="footer__copyright">
+                    © 2025—2026 В ладошках<br>
+                    В ладошках использует файлы cookie. Продолжая работу с mai.ru, вы подтверждаете использование сайтом cookies вашего браузера, которые помогают нам делать этот сайт удобнее для пользователей. Однако вы можете запретить сохранение файлов файлов cookie в настройках своего браузера.
+                </p>
+            </div>
+            <div class="footer__extra">
+                <ul class="footer__extra-menu">
+                    <li class="footer__extra-menu-item">
+                        <a class="footer__extra-menu-link" href="/privacy-policy">Политика обработки персональных данных</a>
+                    </li>
+                    <li class="footer__extra-menu-item">
+                        <a class="footer__extra-menu-link" href="/support">Техническая поддержка</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

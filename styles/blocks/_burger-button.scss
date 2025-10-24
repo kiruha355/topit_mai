@@ -1,0 +1,108 @@
+@use "../helpers" as *;
+
+.burger-button {
+    @include square(rem(48));
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(14) rem(10); 
+    color: var(--color-green30);
+    background-color: var(--color-green95);
+    border: 2px solid var(--color-green80);
+    border-radius: rem(8);
+    cursor: pointer;
+    transition: all var(--transition-duration) ease-in-out;
+    
+    @include hover {
+        color: var(--color-green20);
+        background-color: var(--color-green90);
+        border-color: var(--color-green30);
+        transform: scale(1.05);
+    }
+    
+    &:active {
+        transform: scale(0.95);
+    }
+    
+    &.is-active {
+        color: var(--color-green20);
+        background-color: var(--color-green90);
+        
+        .burger-button__line {
+        &:first-child {
+            rotate: 45deg;
+            transform-origin: 0% 0%;
+            translate: 0.15em -0.1em;
+            width: 100%;
+        }
+        
+        &:nth-child(2) {
+            rotate: -45deg;
+            transform-origin: 0% 100%;
+            translate: 0.15em 0.1em;
+            width: 100%;
+        }
+        
+        &:last-child {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        }
+    }
+    
+    &__line {
+        width: 100%;
+        height: rem(2.5); 
+        background-color: currentColor;
+        border-radius: 2rem;
+        transition: all var(--transition-duration) ease-in-out;
+        transform-origin: center;
+        
+        
+        &:not(:last-child) {
+        margin-bottom: rem(4); 
+        }
+        
+        &:first-child {
+        transform-origin: 0% 0%;
+        }
+        
+        &:nth-child(2) {
+        transition-duration: calc(var(--transition-duration) * 0.8);
+        }
+        
+        &:last-child {
+        transform-origin: 0% 100%;
+        }
+    }
+    }
+
+    
+    .burger-button.perfect {
+    @include square(rem(44));
+    padding: rem(12) rem(8);
+    
+    .burger-button__line {
+        height: rem(2);
+        
+        &:not(:last-child) {
+        margin-bottom: rem(5);
+        }
+    }
+    }
+
+    
+    .burger-button.minimal {
+    @include square(rem(40));
+    padding: rem(10) rem(6);
+    background-color: transparent;
+    border: none;
+    
+    .burger-button__line {
+        height: rem(2);
+        
+        &:not(:last-child) {
+        margin-bottom: rem(4);
+        }
+    }
+    }
