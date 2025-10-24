@@ -453,7 +453,7 @@ a[class] {
 }
 
 .header__body {
-  padding-block: 0.75rem;
+  padding-block: 0.5rem;
   background-color: var(--color-green95);
   border-bottom: 1px solid var(--color-green90);
 }
@@ -467,7 +467,7 @@ a[class] {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  gap: 8.125rem;
+  gap: 0.625rem;
 }
 @media (width > 90.06125rem) {
   .header__overlay {
@@ -483,17 +483,17 @@ a[class] {
   flex-shrink: 0;
 }
 .header__logo .logo__image {
-  width: 9.375rem;
+  width: 11.875rem;
   height: auto;
 }
 @media (width <= 90.06125rem) {
   .header__logo .logo__image {
-    width: 7.5rem;
+    width: 10rem;
   }
 }
 @media (width <= 90.06125rem) {
   .header__logo .logo__image {
-    width: 5rem;
+    width: 7.5rem;
   }
 }
 .header__menu {
@@ -513,8 +513,8 @@ a[class] {
   position: relative;
 }
 .header__menu-link {
-  padding: 0.25rem 0.9375rem;
-  font-size: 0.9375rem;
+  padding: 0.125rem 0.875rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: var(--color-green30);
   text-decoration: none;
@@ -531,20 +531,20 @@ a[class] {
   content: "";
   position: absolute;
   bottom: 0.0625rem;
-  left: 0.75rem;
-  width: calc(100% - 1.5rem);
+  left: 1.125rem;
+  width: calc(100% - 2.25rem);
   height: 0.125rem;
   background-color: var(--color-green50);
   display: none;
 }
 .header__login-link {
-  padding: 0.5rem 1.25rem;
-  font-size: 0.9375rem;
+  padding: 0.625rem 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: var(--color-green20);
+  color: var(--color-green30);
   background-color: var(--color-green90);
   border: 2px solid transparent;
-  border-radius: 1.25rem;
+  border-radius: 1.875rem;
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
